@@ -51,7 +51,7 @@ const helpersVendedor = {
           throw new Error(
             `Ya existe esa telefono en la base de datos!!! ${telefono}`
           );
-        }
+        } else if(req.req.method ==='POST')
         throw new Error(
           `Ya existe ese teléfono en la base de datos!!! ${telefono}`
         );
