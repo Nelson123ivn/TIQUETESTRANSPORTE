@@ -27,7 +27,7 @@ router.post(
       max: 10,
     }),
     check("cedula", "La cedula esta duplicada").custom(helpersCliente.existeCedula),
-    check('email', "El email es requerido").notEmpty(),
+    check('email', "El email es requerido").not().isEmpty(),
     check('email').custom(helpersGeneral.verificarEspacios),
     check("email", "El email debe contener el símbolo @").custom(helpersCliente.validarEmail),
     check("email", "El email ya existe").custom(helpersCliente.existeEmail),
